@@ -1,3 +1,4 @@
+
 <!doctype html>
 <html lang="en">
   <head>
@@ -5,6 +6,36 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="description" content="Data journalist and visual storyteller" />
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="preload" href="/global.css" as="style" />
+    <link rel="stylesheet" href="/global.css" />
+
+    <!--
+      Paint the background colour instantly — before any external CSS loads.
+      This eliminates the flash of white/unstyled content on slow connections.
+      Keep this value in sync with --deepsea in global.css.
+    -->
+    <meta name="theme-color" content="#000023" />
+    <!-- <style>html,body{background:#000023;margin:0}</style> -->
+
+    <!--
+      Preload the first hero image (above the fold) so the fetch starts in
+      parallel with JS parsing, not after Svelte mounts.
+      Use the mobile asset on narrow screens, tablet asset on wider screens.
+    -->
+    <link
+      rel="preload"
+      as="image"
+      href="/assets/images/bbo-ev-energy-livermore-320.webp"
+      media="(max-width: 520px)"
+      type="image/webp"
+    />
+    <link
+      rel="preload"
+      as="image"
+      href="/assets/images/bbo-ev-energy-livermore-680.webp"
+      media="(min-width: 521px)"
+      type="image/webp"
+    />
 
     <!--
       DNS prefetch for font origins so the TCP handshake is already done
@@ -20,16 +51,39 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 
+    <!--
+      Load fonts non-blocking via the print-media trick:
+        1. Browser fetches the stylesheet without blocking rendering (media="print").
+        2. Once loaded, onload flips it to media="all" so it applies.
+        3. <noscript> provides a synchronous fallback for no-JS environments.
+
+      Fonts consolidated from 3 families (Roboto + Inter + Doto) to 2:
+        - Inter replaces Roboto (near-identical metrics; halves font CSS weight)
+        - Doto kept for the display/special usage (nav logo, recipe captions)
+    -->
+    <link
+      rel="preload"
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&family=Inter:wght@400;500;700&family=Doto:wght,ROND@700,100&display=swap"
+      as="style"
+    />
     <link
       href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&family=Inter:wght@400;500;700&family=Doto:wght,ROND@700,100&display=swap"
       rel="stylesheet"
+      media="print"
+      onload="this.media='all'"
     />
+    <noscript>
+      <link
+        href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&family=Inter:wght@400;500;700&family=Doto:wght,ROND@700,100&display=swap"
+        rel="stylesheet"
+      />
+    </noscript>
 
     <title>Elaine He</title>
-    <script type="module" crossorigin src="/assets/index-ZQZ-Gia2.js"></script>
+    <script type="module" crossorigin src="/assets/index-DuFYyD4x.js"></script>
     <link rel="modulepreload" crossorigin href="/assets/works-q0tUunib.js">
     <link rel="stylesheet" crossorigin href="/assets/works-DFup8iX_.css">
-    <link rel="stylesheet" crossorigin href="/assets/index-v5dX8Z9Z.css">
+    <link rel="stylesheet" crossorigin href="/assets/index-BigLemyA.css">
   </head>
 
   <body>

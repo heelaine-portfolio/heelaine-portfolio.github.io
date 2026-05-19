@@ -1,0 +1,185 @@
+/* ============================================================
+   DESIGN TOKENS
+   ============================================================ */
+:root {
+  /* Palette */
+  --lime:    #16D833;
+  --sky:     #43DDE2;
+  --deepsea: #000023;
+
+  --milk:    #FCF8F5;
+  --cloud:   #DCDBDB;
+  --storm:   #999999;
+  --ink:     #000000;
+
+  /* Typography */
+  --font-heds:    "Roboto", sans-serif;
+  --font-body:    "Inter", sans-serif;
+  --font-special: "Doto", sans-serif;
+
+  --wght-regular: 400;
+  --wght-medium:  500;
+  --wght-bold:    700;
+
+  /* Spacing scale */
+  --space-xs: 0.25rem;
+  --space-sm: 0.5rem;
+  --space-md: 1rem;
+  --space-lg: 2rem;
+  --space-xl: 4rem;
+
+  /* Layout */
+  --container-width: 1100px;
+  --container-pad:   1rem;
+
+  /* Shared component tokens */
+  --radius-sm: 7px;
+  --radius-lg: 21px;
+
+  /* Close button tokens — shared by Lightbox and CardLightbox */
+  --close-size:      35px;
+  --close-fg:        var(--ink);
+  --close-bg:        var(--lime);
+  --close-hover:     var(--sky);
+  --close-font-size: 14px;
+  --close-offset:    -14px;
+}
+
+
+/* ============================================================
+   RESET
+   ============================================================ */
+*, *::before, *::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+
+/* ============================================================
+   BASE
+   ============================================================ */
+html {
+  font-family: var(--font-body);
+  font-size: 16px;
+  cursor: default;
+  scroll-behavior: smooth;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
+}
+
+body {
+  background: var(--milk);
+  color: var(--ink);
+  min-height: 100svh;
+  text-wrap: pretty;
+}
+
+
+/* ============================================================
+   CONTAINER
+   ============================================================ */
+.container {
+  width: min(var(--container-width), 100% - var(--container-pad) * 2);
+  margin-inline: auto;
+}
+
+/*section:not(#home):not(#about) {
+  content-visibility: auto;
+  contain-intrinsic-size: 0 800px;
+}*/
+
+/* ============================================================
+   TYPOGRAPHY
+   ============================================================ */
+h1 {
+  font-family: var(--font-special);
+  font-size: clamp(2.5rem, 8vw, 5rem);
+  font-weight: var(--wght-light);
+  color: var(--lime);
+  text-align: center;
+  line-height: 1.05;
+}
+
+/* Section label */
+h2 {
+  font-family: var(--font-heds);
+  font-size: clamp(2rem, 6vw, 4rem);
+  font-weight: var(--wght-regular);
+  text-align: center;
+  padding: clamp(2rem, 5vw, 5rem) 0 clamp(1rem, 2vw, 2rem);
+}
+
+/* Org label */
+h3 {
+  font-family: var(--font-heds);
+  color: var(--storm);
+  text-transform: uppercase;
+  font-size: 0.7rem;
+  font-weight: var(--wght-regular);
+  /*padding-bottom: 1rem;*/
+}
+
+/* Story title */
+h4 {
+  font-family: var(--font-heds);
+  font-size: 1rem;
+  text-transform: uppercase;
+  font-size: 0.8rem;
+}
+
+h4 a {
+  display: inline;
+  color: var(--lime);
+  font-weight: var(--wght-medium);
+  background: none;
+  margin-bottom: 0.5rem;
+}
+
+p {
+  font-family: var(--font-body);
+  line-height: 1.2;
+}
+
+a {
+  display: block;
+  text-decoration: none;
+  color: var(--ink);
+  font-family: var(--font-heds);
+  font-weight: var(--wght-medium);
+  transition: background-color 0.3s ease;
+}
+
+
+/* ============================================================
+   MEDIA
+   ============================================================ */
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+video {
+  max-width: 100%;
+  display: block;
+}
+
+
+/* ============================================================
+   WORKS SECTION BACKGROUND
+   ============================================================ */
+  .works {
+    background-image:
+      radial-gradient(var(--lime) 10%, transparent 11%),
+      radial-gradient(var(--lime) 10%, transparent 11%);
+    background-size: 5px 5px;
+    background-position: 0 0, 10px 10px;
+  }
+
+  @media (min-width: 521px) {
+    .works {
+      background-attachment: fixed;
+    }
+  }
