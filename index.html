@@ -11,15 +11,12 @@
 
     <!--
       Paint the background colour instantly — before any external CSS loads.
-      This eliminates the flash of white/unstyled content on slow connections.
-      Keep this value in sync with --deepsea in global.css.
     -->
     <meta name="theme-color" content="#000023" />
 
     <!--
       Preload the first hero image (above the fold) so the fetch starts in
       parallel with JS parsing, not after Svelte mounts.
-      Use the mobile asset on narrow screens, tablet asset on wider screens.
     -->
     <link
       rel="preload"
@@ -55,10 +52,6 @@
         1. Browser fetches the stylesheet without blocking rendering (media="print").
         2. Once loaded, onload flips it to media="all" so it applies.
         3. <noscript> provides a synchronous fallback for no-JS environments.
-
-      Fonts consolidated from 3 families (Roboto + Inter + Doto) to 2:
-        - Inter replaces Roboto (near-identical metrics; halves font CSS weight)
-        - Doto kept for the display/special usage (nav logo, recipe captions)
     -->
     <link
       rel="preload"
@@ -66,7 +59,7 @@
       as="style"
     />
     <link
-      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&family=Doto:wght,ROND@700,100&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@100;400;500;700&family=Doto:wght,ROND@700,100&display=swap"
       rel="stylesheet"
       media="print"
       onload="this.media='all'"
@@ -79,10 +72,10 @@
     </noscript>
 
     <title>Elaine He</title>
-    <script type="module" crossorigin src="/assets/index-CNY6nTkC.js"></script>
-    <link rel="modulepreload" crossorigin href="/assets/works-xtmu1n-S.js">
-    <link rel="stylesheet" crossorigin href="/assets/works-BmPxqt0x.css">
-    <link rel="stylesheet" crossorigin href="/assets/index-CX5Mspsw.css">
+    <script type="module" crossorigin src="/assets/index-CR4ZcAQJ.js"></script>
+    <link rel="modulepreload" crossorigin href="/assets/works-BucwEzyp.js">
+    <link rel="stylesheet" crossorigin href="/assets/works-Cej7qhLY.css">
+    <link rel="stylesheet" crossorigin href="/assets/index-Bm2B1Ikc.css">
   </head>
 
   <body>

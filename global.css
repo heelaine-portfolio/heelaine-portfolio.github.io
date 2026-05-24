@@ -3,6 +3,7 @@
    ============================================================ */
 :root {
   /* Palette */
+  --wasabi:  #ec0062;
   --lime:    #16D833;
   --sky:     #43DDE2;
   --deepsea: #000023;
@@ -16,6 +17,7 @@
   --font-body:    "Inter", sans-serif;
   --font-special: "Doto", sans-serif;
 
+  --wght-light:   100;
   --wght-regular: 400;
   --wght-medium:  500;
   --wght-bold:    700;
@@ -37,9 +39,8 @@
 
   /* Close button tokens — shared by Lightbox and CardLightbox */
   --close-size:      35px;
-  --close-fg:        var(--ink);
+  --close-fg:        var(--deepsea);
   --close-bg:        var(--lime);
-  --close-hover:     var(--sky);
   --close-font-size: 14px;
   --close-offset:    -14px;
 }
@@ -60,6 +61,7 @@
    ============================================================ */
 html {
   font-family: var(--font-body);
+  font-weight: var(--wght-light);
   font-size: 16px;
   cursor: default;
   scroll-behavior: smooth;
@@ -70,7 +72,7 @@ html {
 
 body {
   background: var(--milk);
-  color: var(--ink);
+  color: var(--deepsea);
   min-height: 100svh;
   text-wrap: pretty;
 }
@@ -84,28 +86,25 @@ body {
   margin-inline: auto;
 }
 
-/*section:not(#home):not(#about) {
-  content-visibility: auto;
-  contain-intrinsic-size: 0 800px;
-}*/
 
 /* ============================================================
    TYPOGRAPHY
    ============================================================ */
 h1 {
   font-family: var(--font-special);
-  font-size: clamp(2.5rem, 8vw, 5rem);
+  font-size: clamp(2rem, 8vw, 3.2rem);
   font-weight: var(--wght-light);
-  color: var(--lime);
   text-align: center;
   line-height: 1.05;
+  text-transform: lowercase;
 }
 
 /* Section label */
 h2 {
-  font-family: var(--font-body);
+  font-family: var(--font-special);
   font-size: clamp(2rem, 6vw, 4rem);
   font-weight: var(--wght-regular);
+  color: var(--milk);
   text-align: center;
   padding: clamp(2rem, 5vw, 5rem) 0 clamp(1rem, 2vw, 2rem);
 }
@@ -113,7 +112,7 @@ h2 {
 /* Org label */
 h3 {
   font-family: var(--font-body);
-  color: var(--storm);
+  /*color: var(--storm);*/
   text-transform: uppercase;
   font-size: 0.7rem;
   font-weight: var(--wght-regular);
@@ -123,22 +122,22 @@ h3 {
 /* Story title */
 h4 {
   font-family: var(--font-body);
-  font-size: 1rem;
-  text-transform: uppercase;
-  font-size: 0.8rem;
+  font-size: 0.9rem;
+  /*text-transform: uppercase;*/
 }
 
 h4 a {
   display: inline;
-  color: var(--lime);
+  color: var(--deepsea);
   font-weight: var(--wght-medium);
-  background: none;
+  background: var(--lime);
   margin-bottom: 0.5rem;
 }
 
 p {
   font-family: var(--font-body);
   line-height: 1.2;
+  font-weight: var(--wght-regular);
 }
 
 a {
@@ -170,13 +169,22 @@ video {
    WORKS SECTION BACKGROUND
    ============================================================ */
 
-  @media (min-width: 521px) {
-    .works {
-      background-attachment: fixed;
+  .works {
+    background-color: var(--deepsea);
+  }
+
+/*
+  .works {
       background-image:
         radial-gradient(var(--lime) 10%, transparent 11%),
         radial-gradient(var(--lime) 10%, transparent 11%);
       background-size: 5px 5px;
       background-position: 0 0, 10px 10px;
-    }
+
   }
+
+  @media (min-width: 521px) {
+    .works {
+      background-attachment: fixed;
+    }
+  }*/
