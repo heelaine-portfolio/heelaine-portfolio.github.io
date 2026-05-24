@@ -3,15 +3,12 @@
    ============================================================ */
 :root {
   /* Palette */
-  --wasabi:  #ec0062;
   --lime:    #16D833;
-  --sky:     #43DDE2;
   --deepsea: #000023;
 
   --milk:    #FCF8F5;
   --cloud:   #DCDBDB;
   --storm:   #999999;
-  --ink:     #000000;
 
   /* Typography */
   --font-body:    "Inter", sans-serif;
@@ -102,7 +99,7 @@ h1 {
 /* Section label */
 h2 {
   font-family: var(--font-special);
-  font-size: clamp(2rem, 6vw, 4rem);
+  font-size: clamp(1.8rem, 6vw, 3rem);
   font-weight: var(--wght-regular);
   color: var(--milk);
   text-align: center;
@@ -112,11 +109,10 @@ h2 {
 /* Org label */
 h3 {
   font-family: var(--font-body);
-  /*color: var(--storm);*/
+  color: var(--storm);
   text-transform: uppercase;
   font-size: 0.7rem;
   font-weight: var(--wght-regular);
-  /*padding-bottom: 1rem;*/
 }
 
 /* Story title */
@@ -172,19 +168,3 @@ video {
   .works {
     background-color: var(--deepsea);
   }
-
-/*
-  .works {
-      background-image:
-        radial-gradient(var(--lime) 10%, transparent 11%),
-        radial-gradient(var(--lime) 10%, transparent 11%);
-      background-size: 5px 5px;
-      background-position: 0 0, 10px 10px;
-
-  }
-
-  @media (min-width: 521px) {
-    .works {
-      background-attachment: fixed;
-    }
-  }*/
