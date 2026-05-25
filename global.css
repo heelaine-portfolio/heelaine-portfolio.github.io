@@ -9,6 +9,7 @@
   --milk:    #FCF8F5;
   --cloud:   #DCDBDB;
   --storm:   #999999;
+  --ink:     #000000;
 
   /* Typography */
   --font-body:    "Inter", sans-serif;
@@ -69,7 +70,7 @@ html {
 
 body {
   background: var(--milk);
-  color: var(--deepsea);
+  color: var(--ink);
   min-height: 100svh;
   text-wrap: pretty;
 }
@@ -89,8 +90,9 @@ body {
    ============================================================ */
 h1 {
   font-family: var(--font-special);
-  font-size: clamp(2rem, 8vw, 3.2rem);
+  font-size: clamp(2rem, 8vw, 3.3rem);
   font-weight: var(--wght-light);
+  color: var(--deepsea);
   text-align: center;
   line-height: 1.05;
   text-transform: lowercase;
@@ -119,12 +121,10 @@ h3 {
 h4 {
   font-family: var(--font-body);
   font-size: 0.9rem;
-  /*text-transform: uppercase;*/
 }
 
 h4 a {
   display: inline;
-  color: var(--deepsea);
   font-weight: var(--wght-medium);
   background: var(--lime);
   margin-bottom: 0.5rem;
