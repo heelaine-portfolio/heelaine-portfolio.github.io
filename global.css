@@ -69,7 +69,7 @@ html {
 }
 
 body {
-  background: var(--milk);
+  background: var(--deepsea);
   color: var(--ink);
   min-height: 100svh;
   text-wrap: pretty;
@@ -159,12 +159,3 @@ video {
   max-width: 100%;
   display: block;
 }
-
-
-/* ============================================================
-   WORKS SECTION BACKGROUND
-   ============================================================ */
-
-  .works {
-    background-color: var(--deepsea);
-  }
