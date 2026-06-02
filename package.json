@@ -1,0 +1,23 @@
+{
+  "homepage": "https://heelaine-portfolio.github.io/portfolio",
+  "name": "portfolio",
+  "private": false,
+  "version": "0.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "optimize": "node scripts/optimize-images.js",
+    "cleanup-duplicates": "node scripts/cleanup-duplicates.js",
+    "preview": "vite preview",
+    "clean": "rm -rf dist/",
+    "deploy": "git add . && git commit -m 'Build update' && git push origin main && npm run clean && npm run build && npx gh-pages -d dist"
+  },
+  "devDependencies": {
+    "@sveltejs/vite-plugin-svelte": "^7.0.0",
+    "gh-pages": "^6.3.0",
+    "sharp": "^0.33.5",
+    "svelte": "^5.55.4",
+    "vite": "^8.0.10"
+  }
+}

@@ -1,0 +1,161 @@
+/* ============================================================
+   DESIGN TOKENS
+   ============================================================ */
+:root {
+  /* Palette */
+  --lime:    #16D833;
+  --deepsea: #000023;
+
+  --milk:    #FCF8F5;
+  --cloud:   #DCDBDB;
+  --storm:   #606060;
+  --ink:     #000000;
+
+  /* Typography */
+  --font-body:    "Inter", sans-serif;
+  --font-special: "Doto", sans-serif;
+
+  --wght-light:   100;
+  --wght-regular: 400;
+  --wght-medium:  500;
+  --wght-bold:    700;
+
+  /* Spacing scale */
+  --space-xs: 0.25rem;
+  --space-sm: 0.5rem;
+  --space-md: 1rem;
+  --space-lg: 2rem;
+  --space-xl: 4rem;
+
+  /* Layout */
+  --container-width: 1100px;
+  --container-pad:   1rem;
+
+  /* Shared component tokens */
+  --radius-sm: 7px;
+  --radius-lg: 21px;
+
+  /* Close button tokens — shared by Lightbox and CardLightbox */
+  --close-size:      35px;
+  --close-fg:        var(--deepsea);
+  --close-bg:        var(--lime);
+  --close-font-size: 14px;
+  --close-offset:    -14px;
+}
+
+
+/* ============================================================
+   RESET
+   ============================================================ */
+*, *::before, *::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+
+/* ============================================================
+   BASE
+   ============================================================ */
+html {
+  font-family: var(--font-body);
+  font-weight: var(--wght-light);
+  font-size: 16px;
+  cursor: default;
+  scroll-behavior: smooth;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
+}
+
+body {
+  background: var(--deepsea);
+  color: var(--ink);
+  min-height: 100svh;
+  text-wrap: pretty;
+}
+
+
+/* ============================================================
+   CONTAINER
+   ============================================================ */
+.container {
+  width: min(var(--container-width), 100% - var(--container-pad) * 2);
+  margin-inline: auto;
+}
+
+
+/* ============================================================
+   TYPOGRAPHY
+   ============================================================ */
+h1 {
+  font-family: var(--font-special);
+  font-size: clamp(2rem, 8vw, 3.3rem);
+  font-weight: var(--wght-light);
+  color: var(--deepsea);
+  text-align: center;
+  line-height: 1.05;
+  text-transform: lowercase;
+}
+
+/* Section label */
+h2 {
+  font-family: var(--font-special);
+  font-size: clamp(1.5rem, 6vw, 2.8rem);
+  font-weight: var(--wght-regular);
+  color: var(--milk);
+  text-align: center;
+  padding: clamp(1rem, 3vw, 3rem) 0 clamp(1rem, 2vw, 2rem);
+}
+
+/* Org label */
+h3 {
+  font-family: var(--font-body);
+  color: var(--storm);
+  text-transform: uppercase;
+  font-size: 0.7rem;
+  font-weight: var(--wght-regular);
+}
+
+/* Story title */
+h4 {
+  font-family: var(--font-body);
+  font-size: 0.9rem;
+}
+
+h4 a {
+  display: inline;
+  font-weight: var(--wght-medium);
+  background: var(--lime);
+  margin-bottom: 0.5rem;
+}
+
+p {
+  font-family: var(--font-body);
+  line-height: 1.2;
+  font-weight: var(--wght-regular);
+}
+
+a {
+  display: block;
+  text-decoration: none;
+  color: var(--ink);
+  font-family: var(--font-body);
+  font-weight: var(--wght-medium);
+  transition: background-color 0.3s ease;
+}
+
+
+/* ============================================================
+   MEDIA
+   ============================================================ */
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+video {
+  max-width: 100%;
+  display: block;
+}
