@@ -62,7 +62,7 @@
       {#if submitted}
         <p class="success">Thanks! I’ll be in touch soon.</p>
       {:else if error}
-        <p class="error">Something went wrong. Please email me directly at heelaine.work@gmail.com.</p>
+        <p class="error">Something went wrong. Please email me at heelaine.hello@gmail.com.</p>
       {:else}
         <form on:submit={handleSubmit} novalidate>
           {#if errors.name}<span class="submit-error">{errors.name}</span>{/if}
