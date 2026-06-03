@@ -4,7 +4,7 @@
 :root {
   /* Palette */
   --lime:    #16D833;
-  --deepsea: #000023;
+  --deepsea: #000019;
 
   --milk:    #FCF8F5;
   --cloud:   #DCDBDB;
@@ -69,7 +69,7 @@ html {
 }
 
 body {
-  background: var(--deepsea);
+  background: var(--milk);
   color: var(--ink);
   min-height: 100svh;
   text-wrap: pretty;
