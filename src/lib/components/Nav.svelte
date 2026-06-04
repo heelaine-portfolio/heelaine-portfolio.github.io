@@ -77,7 +77,7 @@
     display: block;
     width: 22px;
     height: 2px;
-    background: var(--milk);
+    background: var(--lime);
     border-radius: var(--radius-sm);
     transition: transform 0.2s ease, opacity 0.2s ease;
     transform-origin: center;
